@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List Application</title>
+
+    <!-- CSS External Link -->
+    <link rel="stylesheet" href="css\style.css">
+
+    <!-- Tailwind CSS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+
+</head>
+<body>
+
+    <header class="text-center bg-red-200 text-blue-900 p-15">
+        <h1 class="text-3xl font-bold">To Do List Application📝</h1>
+    </header>
+    <main>
+        <form>
+            <div class="flex justify-center mt-10">
+                <input type="text" id="task-input" placeholder="Add a new task..." class="text-gray-600 w-150 ml-2 mt-2 p-2 border border-gray-300 rounded">
+                <input type="date" id="due-date-input" class="text-gray-600 w-70 ml-2 mt-2 p-2 border border-gray-300 rounded">
+                <button type="button" onclick="validateForm();" class="ml-2 mt-2 w-30 mr-2 bg-blue-800 font-bold text-white p-2 rounded">Add Task</button>
+            </div>
+        </form>
+
+        <section class="flex justify-between">
+            <button onclick="filterDate()" class="ml-33 mt-4 w-30 bg-green-400 font-bold text-white p-2 rounded">Filter</button>
+            <button onclick="deleteTask()" class="ml-2 mt-4 mr-33 w-30 bg-red-400 font-bold text-white p-2 rounded">Delete All</button>
+        </section>
+
+        <section id="task-list" class="ml-33 mt-10">
+            <!-- Task items will be dynamically added here -->
+             <div>
+                <p class="mr-33 text-center text-gray-600">No tasks added yet.</p>
+             </div>
+    </main>
+    <footer>
+        <p class="text-center text-gray-600 mt-40">© 2025 To Do List Application. All rights reserved.</p>
+    </footer>
+    <!-- Javascript External Link -->
+    <script src="js/script.js"></script>
+
+</body>
+</html>
